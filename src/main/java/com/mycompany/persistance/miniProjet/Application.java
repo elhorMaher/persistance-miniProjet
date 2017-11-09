@@ -33,46 +33,46 @@ public class Application {
             transaction = session.beginTransaction();
 
             // new category
-            Category category_a = new Category();
-            category_a.setName("Cat a");
+            Tache category_a = new Tache();
+            category_a.setTitre("Cat a");
             session.save(category_a);
 
             // new category
-            Category category_b = new Category();
-            category_b.setName("Cat b");
+            Tache category_b = new Tache();
+            category_b.setTitre("Cat b");
             session.save(category_b);
 
             // new product
-            Product product_x = new Product();
-            product_x.setName("Prod x");
+            Developpeur product_x = new Developpeur();
+            product_x.setNom("Prod x");
             product_x.setPrice(456);
             product_x.getCategories().add(category_b);
             session.save(product_x);
 
             // new product
-            Product product_y = new Product();
-            product_y.setName("Prod y");
+            Developpeur product_y = new Developpeur();
+            product_y.setNom("Prod y");
             product_y.setPrice(123);
             product_y.getCategories().add(category_a);
             session.save(product_y);
 
             // new product
-            Product product_z = new Product();
-            product_z.setName("Prod z");
+            Developpeur product_z = new Developpeur();
+            product_z.setNom("Prod z");
             product_z.setPrice(789);
             product_z.getCategories().add(category_a);
             session.save(product_z);
 
             // new product
-            Product product_w = new Product();
-            product_w.setName("Prod w");
+            Developpeur product_w = new Developpeur();
+            product_w.setNom("Prod w");
             product_w.setPrice(258);
             session.save(product_w);
 
             // new category
-            Category category_c = new Category();
-            category_c.setName("Cat c");
-            category_c.getProducts().add(product_w);
+            Tache category_c = new Tache();
+            category_c.Developpeur("Cat c");
+            category_c.getDeveloppeurs().add(product_w);
             session.save(category_c);
 
             transaction.commit();

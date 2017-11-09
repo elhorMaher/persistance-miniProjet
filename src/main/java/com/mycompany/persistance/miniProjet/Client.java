@@ -27,16 +27,18 @@ import javax.persistence.Table;
 
     
 @Entity
-@Table(name = "developper")
-public class Developpeur {
+@Table(name = "client")
+public class Client {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private int id;
 
-    @Column(name = "name", length = 255, nullable = true)
-    private String name;
+    @Column(name = "nom", length = 255, nullable = true)
+    private String nom;
+@Column(name = "prenom", length = 255, nullable = true)
+    private String prenom;
 
     
 
@@ -45,10 +47,44 @@ public class Developpeur {
 
     // Unidirectional mode:
     //@ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "developpeur_tache",
+    @JoinTable(name = "client_projet",
             joinColumns = {
-                @JoinColumn(name = "developpeur_id")},
+                @JoinColumn(name = "client_id")},
             inverseJoinColumns = {
-                @JoinColumn(name = "tache_id")})
-    private List<Tache> taches = new ArrayList<>();
+                @JoinColumn(name = "projet_id")})
+    private List<Projet> projets = new ArrayList<>();
+
+    public int getId() {
+        return id;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public List<Projet> getProjets() {
+        return projets;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
+    }
+
+    public void setProjets(List<Projet> projets) {
+        this.projets = projets;
+    }
+    
+}
 

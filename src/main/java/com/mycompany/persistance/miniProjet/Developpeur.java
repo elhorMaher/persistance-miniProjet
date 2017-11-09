@@ -37,8 +37,8 @@ public class Developpeur {
     @Column(name = "id", nullable = false)
     private int id;
 
-    @Column(name = "name", length = 255, nullable = true)
-    private String name;
+    @Column(name = "nom", length = 255, nullable = true)
+    private String nom;
 
     
 
@@ -62,12 +62,12 @@ public class Developpeur {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getNom() {
+        return nom;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNom(String nom) {
+        this.nom = nom;
     }
 
    
