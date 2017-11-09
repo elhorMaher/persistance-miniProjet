@@ -11,4 +11,5 @@ package com.mycompany.persistance.miniProjet;
  */
 public class Projet {
     
+    
 }

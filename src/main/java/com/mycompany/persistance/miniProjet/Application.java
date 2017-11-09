@@ -11,7 +11,7 @@ import org.hibernate.Transaction;
 /**
  * Application class.
  *
- * @author Nafaa Friaa (nafaa.friaa@isetjb.rnu.tn)
+ * @author elhor maher
  */
 public class Application {
 
